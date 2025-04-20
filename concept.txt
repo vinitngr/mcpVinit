@@ -1,0 +1,36 @@
+Concept: Running MCP Servers using Different Commands
+
+We explored two ways to configure and run our MCP servers:
+
+1. Using NPX:
+{
+  "mcpServers": {
+    "vinit-mcp": {
+      "command": "npx",
+      "args": ["vinit-mcp"]
+    }
+  }
+}
+
+- This approach uses `npx` to run the CLI directly if it's published on npm or linked globally.
+- It helps avoid hardcoding the path to the script.
+- Suitable when the CLI is installed globally or available in your npm registry.
+
+2. Using Node and Direct File Path:
+{
+  "mcpServers": {
+    "vinit-mcp": {
+      "command": "node",
+      "args": ["C:\\Users\\HP VICTUS\\Desktop\\PROJECTMCP\\dist\\index.js"]
+    }
+  }
+}
+
+- This method executes the compiled JavaScript file directly using Node.
+- Useful for local development or when the script is not published globally.
+- Requires the absolute path to the file, which can be less flexible.
+
+Summary:
+- Use `npx` when working with published or globally linked CLIs.
+- Use `node` with a file path for local scripts still in development.
+- Both approaches give flexibility depending on whether your CLI is local or shared.
