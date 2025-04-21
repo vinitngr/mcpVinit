@@ -34,3 +34,15 @@ Summary:
 - Use `npx` when working with published or globally linked CLIs.
 - Use `node` with a file path for local scripts still in development.
 - Both approaches give flexibility depending on whether your CLI is local or shared.
+
+
+
+
+//tool configs
+annotations?: {        // Optional hints about tool behavior
+  title?: string;      // Human-readable title for the tool
+  readOnlyHint?: boolean;    // If true, the tool does not modify its environment
+  destructiveHint?: boolean; // If true, the tool may perform destructive updates
+  idempotentHint?: boolean;  // If true, repeated calls with same args have no additional effect
+  openWorldHint?: boolean;   // If true, tool interacts with external entities
+}

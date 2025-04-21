@@ -11,7 +11,8 @@
   },
   "scripts": {
     "dev": "node src/index.ts",
-    "build": "tsc && chmod 755 dist/index.js"
+    "build": "tsc && chmod 755 dist/index.js",
+    "build2": "tsc && chmod 755 dist/m2-index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.1",
