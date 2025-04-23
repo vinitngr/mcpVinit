@@ -39,13 +39,13 @@ server.setRequestHandler( CallToolRequestSchema , async (request) => {
 });
 
 
-(async () => {
-  try {
+const main = async () => {
     const transport = new StdioServerTransport();
     await server.connect(transport);
     console.error("mcp server connected");
-  } catch (error) {
-    console.error("Failed to initialize MCP server:", error);
-    process.exit(1);
-  }
-})();
+}
+
+main().catch((error) => {
+  console.error("Failed to initialize MCP server:", error);
+  process.exit(1);
+});
