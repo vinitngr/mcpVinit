@@ -42,7 +42,8 @@ server.setRequestHandler( CallToolRequestSchema , async (request) => {
 const main = async () => {
     const transport = new StdioServerTransport();
     await server.connect(transport);
-    console.error("mcp server connected");
+    console.warn("Minimal MCP Server running on stdio - m2 running");
+
 }
 
 main().catch((error) => {

@@ -30,7 +30,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Minimal MCP Server running on stdio");
+  console.warn("Minimal MCP Server running on stdio - m1 running");
 }
 
 main()
